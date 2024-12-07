@@ -33,5 +33,11 @@ class AdminController {
         }
         include 'views/admin/news/add.php';
     }
+       public function editNews() {
+        $this->requireLogin();
+        $id = $_GET['id'];
+        $news = News::getById($id);
+        include 'views/admin/news/edit.php';
+    }
 
 }

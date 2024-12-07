@@ -13,20 +13,23 @@ class Category {
         $stmt->execute([$id]);
         return $stmt->fetch();
     }
-      public static function add($name) {
+
+    public static function add($name) {
         $db = connDB::getConnection();
         $stmt = $db->prepare("INSERT INTO categories (name) VALUES (?)");
         return $stmt->execute([$name]);
     }
-        public static function update($id, $name) {
+
+    public static function update($id, $name) {
         $db = connDB::getConnection();
         $stmt = $db->prepare("UPDATE categories SET name = ? WHERE id = ?");
         return $stmt->execute([$name, $id]);
     }
+
     public static function delete($id) {
         $db = connDB::getConnection();
         $stmt = $db->prepare("DELETE FROM categories WHERE id = ?");
         return $stmt->execute([$id]);
-    }    
+    }
 }
 ?>

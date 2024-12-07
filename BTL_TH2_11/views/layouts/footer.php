@@ -4,3 +4,4 @@
 </body>
 </html>
 <footer>
+  <div class="row">

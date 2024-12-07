@@ -37,3 +37,5 @@
                 <button class="btn btn-primary" type="submit">Tìm kiếm</button>
             </div>
         </form>
+     <a style="margin-left: 10px;" href="index.php?controller=admin&action=logout" class="btn btn-danger">Đăng xuất</a>
+    </nav>

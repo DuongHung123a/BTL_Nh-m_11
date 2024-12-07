@@ -15,3 +15,17 @@
         <tbody>
 <?php foreach ($news as $item): ?>
                 <tr>
+<td><?= $item['id'] ?></td>
+                    <td><?= $item['title'] ?></td>
+                    <td><img src="assets/images/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" style="width: 100px; height: auto;"></td>
+                    <td>
+                        <a href="index.php?controller=admin&action=editNews&id=<?= $item['id'] ?>" class="btn btn-warning">Sửa</a>
+                    </td>
+                    <td>
+                        <a href="index.php?controller=admin&action=deleteNews&id=<?= $item['id'] ?>" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

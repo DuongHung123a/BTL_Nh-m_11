@@ -8,3 +8,6 @@
 <div class="col-12 text-center">
   <hr>
 <p>Copyright by Group 5. All rights reserved.</p>
+   </div>
+        </div>
+</footer>

@@ -29,3 +29,11 @@
                 </li>
             </ul>
         </div>
+  <form method="GET" action="header.php">
+            <input type="hidden" name="controller" value="home">
+            <input type="hidden" name="action" value="search">
+            <div class="input-group">
+                <input type="text" class="form-control" name="keyword" placeholder="Nhập từ khóa tìm kiếm..." value="<?= $_GET['keyword'] ?? '' ?>">
+                <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+            </div>
+        </form>

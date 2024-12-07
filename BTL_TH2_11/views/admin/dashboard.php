@@ -13,3 +13,5 @@
             </tr>
         </thead>
         <tbody>
+<?php foreach ($news as $item): ?>
+                <tr>

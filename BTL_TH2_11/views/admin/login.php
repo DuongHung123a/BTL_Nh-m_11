@@ -20,3 +20,8 @@
                 <label for="password" class="form-label">Mật khẩu</label>
                 <input type="password" name="password" class="form-control" id="password" required>
             </div>
+ <button type="submit" class="btn btn-primary">Đăng nhập</button>
+        </form>
+    </div>
+</body>
+</html>

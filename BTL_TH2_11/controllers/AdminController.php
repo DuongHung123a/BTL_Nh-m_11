@@ -40,4 +40,20 @@ class AdminController {
         $news = News::getById($id);
         include 'views/admin/news/edit.php';
     }
+
+       public function updateNews() {
+        $this->requireLogin();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = $_GET['id'];
+            $title = $_POST['title'];
+            $content = $_POST['content'];
+            $image = $_POST['image'];
+            $category_id = $_POST['category_id'];
+            if (News::update($id, $title, $content, $image, $category_id)) {
+                echo "<script>alert('Sửa tin tức thành công');</script>";
+                header('Location: index.php?controller=admin&action=dashboard');
+                exit;
+            }
+        }
+    }
 }

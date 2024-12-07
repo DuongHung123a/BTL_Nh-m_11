@@ -6,7 +6,7 @@
         <?php foreach ($news as $item): ?>
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="assets/images/<?= $item['image'] ?>" class="card-img-top" alt="<?= $item['title'] ?>">
+                    <img src="images<?= $item['image'] ?>" class="card-img-top" alt="<?= $item['title'] ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $item['title'] ?></h5>
                         <a href="index.php?controller=home&action=detail&id=<?= $item['id'] ?>" class="btn btn-primary">Xem chi tiết</a>

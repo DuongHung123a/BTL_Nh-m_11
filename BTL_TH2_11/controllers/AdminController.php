@@ -20,7 +20,13 @@ class AdminController {
         include 'views/admin/login.php';
     }
 
+   public function logout(){
+        session_start();
+        session_destroy();
+        header('Location: index.php?controller=admin&action=login');
+    }
 
+  
     public function dashboard() {
         $this->requireLogin();
         $news = News::getAll();
